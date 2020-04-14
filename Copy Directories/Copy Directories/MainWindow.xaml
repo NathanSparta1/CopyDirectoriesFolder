@@ -1,0 +1,48 @@
+﻿<Window x:Class="Copy_Directories.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Copy_Directories"
+        mc:Ignorable="d"
+        Title="Copy Directories" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="244*" />
+            <ColumnDefinition Width="242*" />
+            <ColumnDefinition Width="113*" />
+            <ColumnDefinition Width="181*" />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="53*" />
+            <RowDefinition Height="55*" />
+            <RowDefinition Height="10.667" />
+            <RowDefinition Height="185.333" />
+            <RowDefinition Height="62" />
+            <RowDefinition Height="18.667" />
+        </Grid.RowDefinitions>
+        <Label Name="Title" FontSize="30" Content="Copy Directories" FontWeight="UltraBold" HorizontalContentAlignment="Center" Grid.Column="1" Margin="194,-11,0,2" FontStyle="Italic" Grid.ColumnSpan="2"/>
+        <Label Name="FileNameTitle" FontSize="20" FontWeight="Bold" Content="File Name or Full Folder Path" Grid.Column="1" HorizontalAlignment="Left" Width="286" RenderTransformOrigin="0.466,1.439" Height="34" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Label Name="SourceTitle" FontSize="20" FontWeight="Bold" Content="Path to File" Grid.Column="1" Margin="154,0,0,4" HorizontalAlignment="Left" Width="186" RenderTransformOrigin="0.466,1.439" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <Label Name="DestinationTitle" FontSize="20" FontWeight="Bold" Content="Destination Path" Grid.Row="3" Grid.Column="1" Margin="102,6,0,147" HorizontalAlignment="Left" Width="184" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+        <Label Name="FileInfo" FontSize="11" Content="for e.g. MyTextDoc.txt or c:\Myfolder\images" Grid.Column="3" Margin="56,10,0,9" RenderTransformOrigin="0.43,0.551" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Label Name="PathInfo" FontSize="11" Content="for e.g. c:\MyFolder" Grid.Column="3" Margin="56,10,0,11" HorizontalAlignment="Left" Width="250" RenderTransformOrigin="0.43,0.551" Grid.ColumnSpan="2" Grid.Row="2"/>
+
+        <Button x:Name="ClearBTN" Content="Clear All" Grid.Row="4" Grid.Column="1" FontSize="25" FontWeight="Bold" Background="Red" Click="ClearBTNClick" Margin="96,63,0,78"/>
+
+        <Button x:Name="Copy1BTN" Content="Copy Single File" Grid.Row="3" Grid.Column="3" FontSize="18" FontWeight="Bold" Background="Green" Click="Destination1BTNClick" Margin="75,11,75,143" RenderTransformOrigin="0.513,0.569" Grid.RowSpan="2" Grid.ColumnSpan="2"  />
+
+        <Button x:Name="CopyAllBTN" Content="Copy Folder" Grid.Row="4" Grid.Column="3" FontSize="18" FontWeight="Bold" Background="LightGreen" Click="CopyAllBTNClick" Margin="75,63,75,78" RenderTransformOrigin="0.513,0.569" Grid.ColumnSpan="2"  />
+
+
+
+        <TextBox Name="FileNameTB" Grid.Column="2"  Background="LightGray" BorderBrush="Black" BorderThickness="5" FontSize="20" Margin="42,4,62,3" RenderTransformOrigin="0.464,1.276" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <TextBox Name="SourceTB" Grid.Column="2"  Background="LightGray" BorderBrush="Black" BorderThickness="5" FontSize="20" Margin="42,2,62,3" RenderTransformOrigin="0.464,1.276" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <TextBox Name="DestinationTB" Grid.Row="3" Grid.Column="2" Background="LightGray" BorderBrush="Black" BorderThickness="5" FontSize="20" Margin="42,6,62,143" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>
